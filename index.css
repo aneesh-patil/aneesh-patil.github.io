@@ -1,0 +1,116 @@
+:root {
+    --text-color: #2b2b2b;
+    --background-color: #fcfbf9;
+    --accent-color: #6e6b67;
+    --link-color: #005b99;
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    --header-font: Georgia, "Times New Roman", Times, serif;
+    --spacing-unit: 1.5rem;
+    --max-width: 800px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 2rem;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.lang-switch-wrapper {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#lang-toggle {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: background-color 0.2s ease;
+}
+
+#lang-toggle:hover {
+    background-color: #eee;
+}
+
+header {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+    color: #111;
+}
+
+h1 span {
+    display: block;
+}
+
+.intro {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+.intro p {
+    margin-bottom: 0.5rem;
+}
+
+nav ul.social-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul.social-links li a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+nav ul.social-links li a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        margin-top: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
